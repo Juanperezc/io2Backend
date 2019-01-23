@@ -8,7 +8,7 @@ if(missing(n)){
   n <- 400
 }
 if(missing(a)){
-  a <- -1000
+  a <- -100
 }
 if(n%%2!=0)
 {print("La particion debe ser un numero par");return()}

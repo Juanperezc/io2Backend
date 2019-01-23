@@ -2,8 +2,14 @@
 source("./rscript/lib/normal-function.R")
 #? Funcion de Trapecio
 #todo =================================
-Trapecio <- function(a,b,n)
+Trapecio <- function(b,n,a)
 {
+if(missing(n)){
+  n <- 400
+}
+if(missing(a)){
+  a <- -100
+}
 if(n==1)
 {
 h <- (b-a)/2
