@@ -8,6 +8,8 @@ router.get('/', function(req, res, next) {
 });
 router.get('/api/normal/simpsom', function(req, res, next) {
   res.setHeader('Content-Type', 'application/json');
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   var a = req.query.a;
   var b = req.query.b;
   var n = req.query.n;  //true
@@ -29,6 +31,8 @@ try {
 });
 router.get('/api/normal/trapecio', function(req, res, next) {
   res.setHeader('Content-Type', 'application/json');
+   res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   var a = req.query.a;
   var b = req.query.b;
   var n = req.query.n;  //true
@@ -50,6 +54,8 @@ try {
 });
 router.get('/api/normal/table', function(req, res, next) {
   res.setHeader('Content-Type', 'application/json');
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
 try {
   var here = 'rscript/normalTable.R';
   var d = R(here)
