@@ -2,8 +2,7 @@
 source("./rscript/lib/simpson.R")
 
 #? Hacemos una secuancia para poder iterarla
-u=seq(0,3.09,by=0.01)
-
+u=seq(-3.09,0,by=0.01)
 vector = c() #? definimos un vector vacio
 for(i in u){
 #? Agregamos los valores de la secuencia al vector

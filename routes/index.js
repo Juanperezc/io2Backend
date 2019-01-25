@@ -68,4 +68,21 @@ try {
   console.log(err)
 }
 });
+
+router.get('/api/normal/tablen', function(req, res, next) {
+  res.setHeader('Content-Type', 'application/json');
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+try {
+  var here = 'rscript/normalTablenegative.R';
+  var d = R(here)
+  .data()
+  .callSync();
+  console.log(d);
+  res.send(JSON.stringify({ response: d, error: null}));
+} catch (err) {
+  res.send(JSON.stringify({ error: err }));
+  console.log(err)
+}
+});
 module.exports = router;
