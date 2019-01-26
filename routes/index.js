@@ -2,10 +2,34 @@ var express = require('express');
 var router = express.Router();
 var R = require("r-script");
 var path = require('path');
+const ps = require('python-shell');
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'Express' });
 });
+
+router.get('/api/normal/simpsompy', function(req, res, next) {
+  res.setHeader('Content-Type', 'application/json');
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  var a = req.query.a;
+  var b = req.query.b;
+  var n = req.query.n;  //true
+  let options = {
+    mode: 'text',
+    pythonOptions: ['-u'], // get print results in real-time
+    scriptPath: 'pyscript/lib',
+    args: [a, b ,n]
+  };
+   
+  ps.PythonShell.run('normals.py', options, function (err, results) {
+    if (err) throw err;
+    // results is an array consisting of messages collected during execution
+    res.send(JSON.stringify({ response: results[0], error: null}));
+   
+  });
+});
+
 router.get('/api/normal/simpsom', function(req, res, next) {
   res.setHeader('Content-Type', 'application/json');
   res.setHeader("Access-Control-Allow-Origin", "*");
