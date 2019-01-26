@@ -16,7 +16,7 @@ if(n == 2)
 {
 h <- (b-a)/2
 m <- (b+a)/2
-integral <- (h/3)*(f(a)+4*f(m)+f(b))
+integral <- (h/3)*(f(a)+4*f(m)+f(b)) 
 }
 else
 {
@@ -37,3 +37,4 @@ return(round(integral, digits = 5))
 }
 
 #! =================================
+
