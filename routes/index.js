@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
     res.render('index', { title: 'Express' });
 });
 
-router.get('/api/normal/simpsompy', function(req, res, next) {
+router.get('/api/normal/simpsonpy', function(req, res, next) {
   res.setHeader('Content-Type', 'application/json');
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -30,7 +30,7 @@ router.get('/api/normal/simpsompy', function(req, res, next) {
   });
 });
 
-router.get('/api/normal/simpsom', function(req, res, next) {
+router.get('/api/normal/simpson', function(req, res, next) {
   res.setHeader('Content-Type', 'application/json');
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");

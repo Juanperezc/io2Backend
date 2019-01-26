@@ -33,7 +33,7 @@ plot(x,y,"h",xlim=c(a,b))
 integral <- (h/3)*(f(xi[1]) +
 2*sum(f(xi[2:(n/2)]))+4*sum(f(xp[1:(n/2)]))+f(xi[(n/2)+1]))
 }
-return(round(integral, digits = 5))
+return(round(integral, digits = 8))
 }
 
 #! =================================
