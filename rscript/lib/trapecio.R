@@ -25,5 +25,5 @@ plot(x,y,"h",xlim=c(a,b))
 integral <- h*( (f(x[1]) + f(x[n+1]))/2 + sum(f(x[2:n])))
 }
 
-round(integral, digits = 8)
+return integral
 }
