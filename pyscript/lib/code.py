@@ -4,14 +4,6 @@ import sys
 import ast
 import json
 from sys import argv
-from prettytable import PrettyTable   #python-ptable
-
-def tabularFj(nombreFila1,nombreCol2,listaCol1,listaCol2):
-    t = PrettyTable([nombreFila1,nombreCol2])
-    for x in range(0,len(listaCol1)):
-        t.add_row([listaCol1[x],listaCol2[x]])
-    print (t)
-    print()
 
 def calcular(lap,datosElementos,listaFuncionDuración,tiempoAveria,desviacionEst):
     tiempoAveria,desviacionEst = 0,0
