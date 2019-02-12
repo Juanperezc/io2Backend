@@ -1,3 +1,3 @@
-# Integracion numerica backend
+# Tiempo limite de funcionamiento para equipos backend
 
-Materia: programacion numerica
+Materia: Investigacion de operaciones 2
